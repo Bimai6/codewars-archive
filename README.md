@@ -51,21 +51,12 @@ Edit **`fetch_solutions.rb`**:
 USERNAME = 'YOUR_USERNAME'
 ```
 
-### 3. Generate GitHub Token
-Follow these steps to generate your **Personal Access Token (PAT)**:
-1. Go to **GitHub Settings → Developer Settings → Personal Access Tokens**.
-2. Generate a new token with:
-   - `repo`
-   - `workflow`
-3. Copy the token.
+### 3. Configurate GitHub Actions
+The action will automatically use the GITHUB_TOKEN provided by GitHub Actions to authenticate and push changes to the repository.
 
-### 4. Add Secret to GitHub
-1. Go to your repo **Settings → Secrets and Variables → Actions**.
-2. Click **New repository secret**.
-3. Name it **`GH_TOKEN`**.
-4. Paste your token.
+No need to generate or configure a Personal Access Token (PAT). The GITHUB_TOKEN will automatically have the necessary permissions to push changes to public repositories.
 
-### 5. Upload the Project
+### 4. Upload the Project
 ```bash
 git init
 git add .
