@@ -12,7 +12,30 @@ EXTENSIONS = {
   'javascript' => '.js',
   'python' => '.py',
   'java' => '.java',
-  'csharp' => '.cs'
+  'csharp' => '.cs',
+  'c' => '.c',
+  'cpp' => '.cpp',
+  'go' => '.go',
+  'swift' => '.swift',
+  'typescript' => '.ts',
+  'rust' => '.rs',
+  'scala' => '.scala',
+  'php' => '.php',
+  'kotlin' => '.kt',
+  'haskell' => '.hs',
+  'perl' => '.pl',
+  'lua' => '.lua',
+  'r' => '.r',
+  'elixir' => '.ex',
+  'clojure' => '.clj',
+  'fsharp' => '.fs',
+  'objectivec' => '.m',
+  'dart' => '.dart',
+  'bash' => '.sh',
+  'sql' => '.sql',
+  'groovy' => '.groovy',
+  'powershell' => '.ps1',
+  'shell' => '.sh'
 }
 
 def fetch_solutions
@@ -32,3 +55,5 @@ def fetch_solutions
     end
   end
 end
+
+fetch_solutions
