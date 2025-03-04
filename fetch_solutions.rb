@@ -1,6 +1,7 @@
 require 'net/http'
 require 'json'
 require 'fileutils'
+require 'time'
 
 URL = "https://www.codewars.com/api/v1/users/Bimai6/code-challenges/completed"
 SOLUTIONS_FOLDER = 'solutions'
@@ -47,11 +48,17 @@ def fetch_solutions
     title = challenge['name'].gsub(/[^0-9A-Za-z]/, '_')
     language = challenge['completedLanguages'].first
     extension = EXTENSIONS[language] || '.txt'
+
+    kata_slug = challenge['name'].downcase.gsub(' ', '-').gsub(/[^\w-]/, '')  
+    url = "https://www.codewars.com/kata/#{kata_slug}"
+
+    completed_at = Time.parse(challenge['completedAt']).strftime('%Y-%m-%d')
+
     file = "#{SOLUTIONS_FOLDER}/#{title}#{extension}"
 
     unless File.exist?(file)
       puts "Adding solution: #{title}"
-      File.write(file, "Kata: #{challenge['name']}\nURL: #{challenge['url']}\nLanguage: #{language}\n")
+      File.write(file, "Kata: #{challenge['name']}\nURL: #{url}\nLanguage: #{language}\nCompleted At: #{completed_at}\n")
     end
   end
 end
