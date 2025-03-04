@@ -54,10 +54,13 @@ def fetch_solutions
 
     completed_at = Time.parse(challenge['completedAt']).strftime('%Y-%m-%d')
 
-    file = "#{SOLUTIONS_FOLDER}/#{title}#{extension}"
+    language_folder = "#{SOLUTIONS_FOLDER}/#{language}"
+    FileUtils.mkdir_p(language_folder)
+
+    file = "#{language_folder}/#{title}#{extension}"
 
     unless File.exist?(file)
-      puts "Adding solution: #{title}"
+      puts "Adding solution: #{title} in #{language}"
       File.write(file, "Kata: #{challenge['name']}\nURL: #{url}\nLanguage: #{language}\nCompleted At: #{completed_at}\n")
     end
   end

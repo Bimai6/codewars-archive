@@ -33,6 +33,11 @@ codewars_auto_uploader/
 │       └── update_codewars.yml    # GitHub Actions configuration
 ├── fetch_solutions.rb             # Ruby script to fetch solutions
 └── solutions/                     # Folder for saving solutions
+    ├── ruby/                      # Ruby solutions
+    ├── javascript/                # JavaScript solutions
+    ├── python/                    # Python solutions
+    └── ...                        # Other language subfolders
+
 ```
 
 ---
@@ -41,8 +46,8 @@ codewars_auto_uploader/
 
 ### 1. Clone this Repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/codewars_auto_uploader.git
-cd codewars_auto_uploader
+git clone https://github.com/Bimai6/codewars-archive.git
+cd codewars-archive
 ```
 
 ### 2. Add Your Codewars Username
@@ -62,7 +67,7 @@ git init
 git add .
 git commit -m "🚀 Initial Commit"
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/codewars_auto_uploader.git
+git remote add origin https://github.com/YOUR_USERNAME/codewars-archive.git
 git push -u origin main
 ```
 
@@ -110,9 +115,11 @@ git push -u origin main
 ---
 
 ## 🎯 Final Result
-Once everything is set up, your Codewars solutions will be automatically uploaded to your GitHub repo every day at **14:00 (2:00 PM)**. 
+Once everything is set up, your Codewars history will be automatically uploaded to your GitHub repository every day at **14:00 (2:00 PM)**. Unfortunately, there is no API resource for your own code, so you'll need to manually copy it into its respective file.
 
 If you want to modify the schedule or add more languages, just let me know! 🔥
+
+
 
 ---
 
