@@ -1,6 +1,6 @@
 # 🚀 Codewars Auto Uploader
 
-Automatically fetch and upload your **Codewars** solutions to **GitHub** every day using **GitHub Actions**.
+Automatically fetch and upload your **Codewars** history to **GitHub** every day using **GitHub Actions**.
 
 ## 📌 Features
 - Daily automated fetching of Codewars solutions at **14:00 (2:00 PM)**.
