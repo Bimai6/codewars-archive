@@ -52,7 +52,7 @@ def fetch_solutions
     kata_slug = challenge['name'].downcase.gsub(' ', '-').gsub(/[^\w-]/, '')  
     url = "https://www.codewars.com/kata/#{kata_slug}"
 
-    completed_at = Time.parse(challenge['completedAt']).strftime('%Y-%m-%d')
+    completed_at = Time.parse(challenge['completedAt']).strftime('%Y-%m-%d %H:%M:%S')
 
     language_folder = "#{SOLUTIONS_FOLDER}/#{language}"
     FileUtils.mkdir_p(language_folder)
@@ -61,7 +61,7 @@ def fetch_solutions
 
     unless File.exist?(file)
       puts "Adding solution: #{title} in #{language}"
-      File.write(file, "Kata: #{challenge['name']}\nURL: #{url}\nLanguage: #{language}\nCompleted At: #{completed_at}\n")
+      File.write(file, "Kata: #{challenge['name']}\nLanguage: #{language}\nCompleted At: #{completed_at}\n #{url}\n")
     end
   end
 end
