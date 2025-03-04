@@ -31,4 +31,4 @@ jobs:
           git commit -m "Auto: New solutions from Codewars" || echo "Nothing new to add"
           git push
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
