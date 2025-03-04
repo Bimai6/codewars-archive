@@ -61,7 +61,7 @@ def fetch_solutions
 
     unless File.exist?(file)
       puts "Adding solution: #{title} in #{language}"
-      File.write(file, "Kata: #{challenge['name']}\nLanguage: #{language}\nCompleted At: #{completed_at}\n #{url}\n")
+      File.write(file, "Kata: #{challenge['name']}\nLanguage: #{language}\nCompleted At: #{completed_at}\n#{url}\n")
     end
   end
 end
