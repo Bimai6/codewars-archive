@@ -71,11 +71,35 @@ git push -u origin main
 ## 🔥 Supported Languages
 | Language   | Extension |
 |------------|-----------|
-| Ruby       | `.rb`    |
-| JavaScript | `.js`    |
-| Python     | `.py`    |
-| Java       | `.java`  |
-| C#         | `.cs`    |
+| Ruby       | `.rb`     |
+| JavaScript | `.js`     |
+| Python     | `.py`     |
+| Java       | `.java`   |
+| C#         | `.cs`     |
+| C          | `.c`      |
+| C++        | `.cpp`    |
+| Go         | `.go`     |
+| Swift      | `.swift`  |
+| TypeScript | `.ts`     |
+| Rust       | `.rs`     |
+| Scala      | `.scala`  |
+| PHP        | `.php`    |
+| Kotlin     | `.kt`     |
+| Haskell    | `.hs`     |
+| Perl       | `.pl`     |
+| Lua        | `.lua`    |
+| R          | `.r`      |
+| Elixir     | `.ex`     |
+| Clojure    | `.clj`    |
+| F#         | `.fs`     |
+| Objective-C| `.m`      |
+| Dart       | `.dart`   |
+| Bash       | `.sh`     |
+| SQL        | `.sql`    |
+| Groovy     | `.groovy` |
+| PowerShell | `.ps1`    |
+| Shell      | `.sh`     |
+
 
 ---
 
