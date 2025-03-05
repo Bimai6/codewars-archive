@@ -1,9 +1,9 @@
-# 🚀 Codewars Auto Uploader
+# 🚀 Codewars Archive
 
 Automatically fetch and upload your **Codewars** history to **GitHub** every day using **GitHub Actions**.
 
 ## 📌 Features
-- Daily automated fetching of Codewars solutions at **14:00 (2:00 PM)**.
+- Daily automated fetching of Codewars API Data at **14:00 (2:00 PM)**.
 - Automatic commit and push to your GitHub repository.
 - Supports multiple languages with correct file extensions.
 - Easy configuration with environment secrets.
@@ -19,7 +19,7 @@ Automatically fetch and upload your **Codewars** history to **GitHub** every day
 
 ## 🎯 How It Works
 1. The **Ruby script** fetches your latest completed katas from Codewars.
-2. Solutions are saved in the **`solutions/`** folder with the appropriate file extension.
+2. Codewars API Data is saved in the **`solutions/`** folder with the appropriate file extension.
 3. A **GitHub Action** automatically runs every day at **14:00 (2:00 PM)**.
 4. New solutions are committed and pushed to your repository.
 
