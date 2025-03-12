@@ -9,34 +9,13 @@ SOLUTIONS_FOLDER = 'solutions'
 FileUtils.mkdir_p(SOLUTIONS_FOLDER)
 
 EXTENSIONS = {
-  'ruby' => '.rb',
-  'javascript' => '.js',
-  'python' => '.py',
-  'java' => '.java',
-  'csharp' => '.cs',
-  'c' => '.c',
-  'cpp' => '.cpp',
-  'go' => '.go',
-  'swift' => '.swift',
-  'typescript' => '.ts',
-  'rust' => '.rs',
-  'scala' => '.scala',
-  'php' => '.php',
-  'kotlin' => '.kt',
-  'haskell' => '.hs',
-  'perl' => '.pl',
-  'lua' => '.lua',
-  'r' => '.r',
-  'elixir' => '.ex',
-  'clojure' => '.clj',
-  'fsharp' => '.fs',
-  'objectivec' => '.m',
-  'dart' => '.dart',
-  'bash' => '.sh',
-  'sql' => '.sql',
-  'groovy' => '.groovy',
-  'powershell' => '.ps1',
-  'shell' => '.sh'
+  'ruby' => '.rb', 'javascript' => '.js', 'python' => '.py', 'java' => '.java',
+  'csharp' => '.cs', 'c' => '.c', 'cpp' => '.cpp', 'go' => '.go', 'swift' => '.swift',
+  'typescript' => '.ts', 'rust' => '.rs', 'scala' => '.scala', 'php' => '.php',
+  'kotlin' => '.kt', 'haskell' => '.hs', 'perl' => '.pl', 'lua' => '.lua', 'r' => '.r',
+  'elixir' => '.ex', 'clojure' => '.clj', 'fsharp' => '.fs', 'objectivec' => '.m',
+  'dart' => '.dart', 'bash' => '.sh', 'sql' => '.sql', 'groovy' => '.groovy',
+  'powershell' => '.ps1', 'shell' => '.sh'
 }
 
 def fetch_solutions
@@ -52,16 +31,15 @@ def fetch_solutions
     kata_slug = challenge['name'].downcase.gsub(' ', '-').gsub(/[^\w-]/, '')  
     url = "https://www.codewars.com/kata/#{kata_slug}"
 
-    completed_at = Time.parse(challenge['completedAt']).strftime('%Y-%m-%d %H:%M:%S')
-
-    language_folder = "#{SOLUTIONS_FOLDER}/#{language}"
+    completed_at = Time.parse(challenge['completedAt'])
+    date_folder = completed_at.strftime('%d-%m-%Y')
+    language_folder = "#{SOLUTIONS_FOLDER}/#{language}/#{date_folder}"
     FileUtils.mkdir_p(language_folder)
 
-    file = "#{language_folder}/#{title}#{extension}"
-
-    unless File.exist?(file)
-      puts "Adding solution: #{title} in #{language}"
-      File.write(file, "Kata: #{challenge['name']}\nLanguage: #{language}\nCompleted At: #{completed_at}\n#{url}\n")
+    file_path = "#{language_folder}/#{title}#{extension}"
+    
+    unless File.exist?(file_path)
+      File.write(file_path, "Kata: #{challenge['name']}\nLanguage: #{language}\nCompleted At: #{completed_at}\n#{url}\n")
     end
   end
 end
