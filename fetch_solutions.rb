@@ -32,7 +32,7 @@ def fetch_solutions
     url = "https://www.codewars.com/kata/#{kata_slug}"
 
     completed_at = Time.parse(challenge['completedAt'])
-    date_folder = completed_at.strftime('%d-%m-%Y')
+    date_folder = completed_at.strftime('%Y-%m-%d')
     language_folder = "#{SOLUTIONS_FOLDER}/#{language}/#{date_folder}"
     FileUtils.mkdir_p(language_folder)
 
